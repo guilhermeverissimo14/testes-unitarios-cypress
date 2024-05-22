@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "cypress:web": "npx cypress open",
-    "cypress:headless": "npx cypress run --browser edge"
+    "cypress:headless": "npx cypress run --browser chrome"
   },
   "keywords": [],
   "author": "",
