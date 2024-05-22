@@ -30,6 +30,17 @@ Recurso: Registro de Imagem
     And the new item should be stored in the localStorage
     Then The inputs should be cleared
 
+    Cenário: Enviando uma imagem com entradas válidas usando a tecla Enter
+    Dado que estou na página de registro de imagens
+    Quando eu digito "Alien BR" no campo de título
+    Então devo ver um ícone de verificação no campo de título
+    Quando eu insiro "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg" no campo URL
+    Então devo ver um ícone de verificação no campo imageUrl
+    Então posso pressionar Enter para enviar o formulário
+    E a lista de imagens cadastradas deverá ser atualizada com o novo item
+    E o novo item deve ser armazenado no localStorage
+    Então as entradas devem ser limpas
+
   Scenario: Submitting an image and updating the list
     Given I am on the image registration page
     Then I have entered "BR Alien" in the title field
